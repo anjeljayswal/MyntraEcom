@@ -1,0 +1,273 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(232, 231, 231);
+    box-sizing: border-box;
+}
+.body{
+    display: flex;
+    flex-direction: row;
+}
+.App nav{
+    display: flex;
+    align-items: center;
+    height: 70px;
+    border: 1px solid rgb(200, 200, 200);
+    box-shadow: 0 1px 2px 0 rgba(133, 133, 133, 0.2), 0 1px 2px 0 rgba(111, 111, 111, 0.2);
+    background-color: white;
+}
+
+.type{
+    font-size: 13px;
+    font-weight: 700;
+    color: rgb(60, 60, 60);
+    margin: 25px;
+}
+
+.icon-holder img{
+    height: 50px;
+    width: 50px;
+    margin: 10px 50px;
+}
+
+nav input{
+    height : 30px;
+    margin: 10px;
+    background-color: rgb(243, 243, 243);
+    text-align: center;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+nav button{
+    height: 30px;
+    width: 60px;
+    background-color: lightcyan;
+    border:1px solid grey;
+    border-radius: 10px;
+}
+.cart-holder{
+    margin-top: 20px;
+    margin-left: 300px;
+}
+.cart-list-length{
+    margin-top: 20px;
+    color: red;
+}
+.cart-holder img{
+    height:30px;
+    width:30px;
+}
+#filter-holder{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(200, 200, 200);
+    box-shadow: 0 1px 2px 0 rgba(133, 133, 133, 0.2), 0 1px 2px 0 rgba(111, 111, 111, 0.2);
+    width: 400px;
+    height : 300px;
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-right: 15px;
+    background-color: white;
+}
+
+form{
+    margin: 10px 30px;
+}
+/* #filter-holder{
+    margin: 10px 30px;
+
+} */
+label{
+    margin: 0px 10px;
+}
+#content{
+    margin: 10px;
+}
+.product-tile-holder{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 10px;
+    padding: 30px 0;
+    width: max-content;
+}
+.indiv-tile-holder{
+    display: flex;
+    height: max-content;
+    width: 250px;
+    flex-direction: column;
+    align-items: center;
+    margin: 7px;
+    padding: 10px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+}
+.indiv-tile-holder img{
+    height: 210px;
+    width : 165px;
+    margin-bottom: 3px;
+}
+.indiv-tile-holder p{
+    font-size: 12px;
+}
+.sort-holder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0px;
+}
+s{
+    margin: 0px 10px;
+}
+#product-modal{
+    display: none;
+    margin-top: 10px;
+    width: 75%;
+}
+#product-modal img{
+    height :330px;
+    width: 330px;
+    padding: 10px;
+}
+#product-description{
+    margin: 30px 100px;
+}
+
+#product-description div{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+#option{
+    display: flex;
+    flex-direction: row;
+}
+.size-option{
+    padding: 20px;
+    margin: 0px 10px;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+.size-option:hover{
+    background-color: red;
+    color: white;
+}
+#xbtn{
+    background-color: transparent;
+    border-color: transparent;
+    outline: 0;
+    height : 20px;
+    width : 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+#product-img-list{
+    display: grid;
+    grid-template-columns: auto auto ;
+    grid-column-gap: 3px;
+    padding: 5px 0;
+}
+.cartdiv{
+    display: flex;
+    height: max-content;
+    width: 250px;
+    flex-direction: column;
+    align-items: center;
+    margin: 7px;
+    padding: 10px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+}
+.cartdiv img{
+    height: 210px;
+    width : 165px;
+    margin-bottom: 3px;
+}
+.cartdiv p{
+    font-size: 12px;
+}
+#cart-modal-content{
+    display: none;
+}
+#cart-list{
+    display: grid;
+    grid-template-columns: auto auto ;
+    grid-column-gap: 3px;
+    padding: 5px 0;
+}
+#price-list{
+    display: flex;
+    flex-direction: column;
+    margin: 100px 300px ;
+    max-width: 500px;
+}
+#price-list div{
+    display: flex;
+    justify-content: space-between;
+}
+
+#success{
+    display: none;
+    color: blue;
+    font-size: 24px;
+}
+
+
+
+/* footer css  */
+.footer{
+    margin-top: 150px;
+    width: 100%;
+    padding: 100px 15%;
+    background: #333;
+    color: #efefef;
+    display: flex;
+}
+
+.footer div{
+    text-align: center;
+}
+
+.col-2{
+    flex-grow: 2;
+}
+.footer div h3{
+    font-weight: 300;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.col-1 a{
+    display: block;
+    text-decoration: none;
+    color: #efefef;
+    margin-bottom:10px ;
+}
+
+.inp
+{
+    width: 400px;
+    height: 45px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    outline: none;
+    border: none;
+} 
+.btn-inp{
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    color: #fff;
+    padding: 10px 30px;
+    font-size: 15px;
+    cursor: pointer;
+
+}
+.social-icons{
+    margin-top: 30px;
+}
+
+.social-icons i{
+    font-size: 22px;
+    margin: 10px;
+}

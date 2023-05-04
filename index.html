@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="footer.css">
+        <script src="https://kit.fontawesome.com/629b76a65f.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="App">
+            <nav>
+                <div class='icon-holder'><img src='https://constant.myntassets.com/web/assets/img/icon.5d108c858a0db793700f0be5d3ad1e120a01a500_2021.png' alt="logo" /></div>
+                <div class='type'>MEN</div>
+                <div class='type'>WOMEN</div>
+                <div class='type'>KIDS</div>
+                <input id="inputSearch" placeholder='Search your product here' onchange="handleSearch()"/>
+                <button id="searchbtn" onclick="clicksearch()">Search</button>
+                <div class='cart-holder' onclick="cart()"><img src="https://www.freeiconspng.com/thumbs/cart-icon/black-shopping-cart-icon-25.jpg" alt="cart"/></div>
+                <div class='cart-list-length' >0</div>
+            </nav>
+            <div class='body'>
+                <div id="filter-holder">
+                    <form class="form">
+                        <p>Gender:-</p>
+                        <input id="male" class="btn" name="gender" type="radio" value="male" onclick="handleClick1(this.value)" checked/>
+                        <label >Male</label><br/>
+                        <input id="female" class="btn" name="gender" type="radio" value="female" onclick="handleClick1(this.value)" />
+                        <label >Female</label>
+                    </form>
+                    <form class="form">
+                        <p>Categories:-</p>
+                        <input id="white" class="btn" type="checkbox" onclick="check()"  />
+                        <label >White</label><br/>
+                        <input id="sleeves" class="btn" type="checkbox" onclick="check()" />                         
+                         <label >Folded Sleeves</label>
+                    </form>
+                </div>
+                <div id='content'>
+                    <div class='sort-holder'>
+                        <select id="selection" onchange="handleChange()">
+                            <option id="select1" value="What's New">What's New</option>
+                            <option id="select2" value="Price low to high" >Price low to high</option>
+                            <option id="select3" value="Better Discount" >Better Discount</option>
+                        </select>
+                    </div>
+                    <div class='product-tile-holder'>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="product-modal">
+            <div id="product-img-list">
+                <img id="img1" src="http://assets.myntassets.com/assets/images/8717979/2019/3/20/585db9fe-1df0-458d-b218-6f514eabb9601553068826233-Mast--Harbour-Men-Shirts-4141553068825026-1.jpg"/>
+                <img id="img2" src="http://assets.myntassets.com/assets/images/8717979/2019/3/20/9e74dcf9-8740-417d-af1f-3eb657138c451553068826154-Mast--Harbour-Men-Shirts-4141553068825026-5.jpg"/>
+                <img id="img3" src="http://assets.myntassets.com/assets/images/8717979/2019/3/20/50f88338-acaf-44d6-9a4b-50782f85e73d1553068826191-Mast--Harbour-Men-Shirts-4141553068825026-3.jpg"/>
+                <img id="img4" src="http://assets.myntassets.com/assets/images/8717979/2019/3/20/6f8ff989-9bb1-4517-8ab9-ae7328db015b1553068826166-Mast--Harbour-Men-Shirts-4141553068825026-4.jpg"/>
+            </div>
+            <div id="product-description">
+                <h1 id="brandname">Brand Name</h1>
+                <div id="description">description</div>
+                <div id="price">price</div>
+                <div><s id="mrp">mrp</s></div>
+                <div id="discount">discount</div>
+                <div>Size Chart</div>
+                <div id="option">
+                    <div class="size-option" id="option1">S</div>
+                    <div class="size-option" id="option2">M</div>
+                    <div class="size-option" id="option3">L</div>
+                    <div class="size-option" id="option4">XL</div>
+                </div>
+                <button onclick="addcart()">Add to Cart</button>
+            </div>
+            <button id="xbtn" onclick="xbtnclick()">X</button>
+        </div>
+        <div id="cart-modal-content">
+            <div id="cart-list">
+
+            </div>
+            <div id="price-list">
+                    <div >Total items<span id="totalitems">0</span></div>
+                    <div >Total Original Price<span id="TotalOriginalPrice">0</span></div>
+                    <div >Total Discount<span id="TotalDiscount">0</span></div>
+                    <div >Final Price<span id="FinalPrice">0</span></div>
+                    <div><button id="buybtn" onclick="buy()">Buy</button></div>
+                    <div id="success"></div>
+            </div>
+            <div>
+                <button id="xbtn" onclick="xbtnclick()">X</button>
+            </div>
+        </div>
+        <script src="App.js"></script>
+
+        <!-- <div class="footer">
+            <div class="col-1">
+                <h3>USEFUL LINKS</h3>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+                <a href="#">Shop</a>
+                <a href="#">Blog</a>
+            </div>
+            <div class="col-2">
+                <h3>NEWSLETTER</h3>
+                <form action="" >
+                    <input class="inp" type="email" placeholder="Your Email Address" required>
+                    <br><button class="btn-inp" type="submit">SUBSCRIBE NOW</button>
+                </form>
+            </div>
+            <div class="clo-3">
+                <h3>CONTACT</h3>
+                <p>123, XYZ Road, BSK 3<br>Raxual, Bihar, IN</p>
+                <div class="social-icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-behance"></i>
+
+                </div>
+            </div>
+        </div> -->
+        <footer class="footer">
+			<div class="footer-left">
+				<img src="logo.jpeg" alt="" height="100" width="100">
+				<p> JAIT solution counts on one of the fastest moving web development and completes suite of software development, Android and IOS app development, Computer training and SEO together with offering different IT-related training courses!</p>
+				<div>
+					<a href="https://www.facebook.com/pages/category/Software-Company/JA-It-Solution-114924523528573/"><i class="fa fa-facebook"></i></a>
+					<a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+					<a href=""><i class="fa fa-dribbble"></i></a>
+					<a href="https://youtube.com/"><i class="fa fa-youtube"></i></a>
+					<a href="https://www.tumblr.com/"><i class="fa fa-tumblr"></i></a>
+				</div>
+			</div>
+			<ul class="footer-right">
+				<li>
+					<h2>  Product</h2>
+					<ul class="box">
+						<li><a href="#">Theme Design</a></li>
+						<li><a href="#">Plugin Design</a></li>
+						<li><a href="#">Wordpress</a></li>
+						<li><a href="#">Jooma Yempalte</a></li>
+						<li><a href="#">HTML Template</a></li>
+					</ul>
+				</li>
+				
+				<li class="features">
+					<h2>Useful Links</h2>
+					<ul class="box">
+						<li><a href="index.php">Home</a></li>
+						<li><a href="login.php">Login</a></li>
+						<li><a href="signup.php">Signup</a></li>
+					</ul>
+				</li>
+				
+				<li>
+					<h2>Address</h2>
+					<ul class="box">
+						<li><a href="https://www.google.com/maps/place/Birgunj/@27.0474286,84.8029716,12z/data=!3m1!4b1!4m5!3m4!1s0x39935446b21c98cb:0x42938e30ff4f6cb5!8m2!3d27.0449005!4d84.8672171">Birgunj</a></li>
+						<li><a href="https://www.google.com/maps/place/Nepal/@28.3236393,79.6362605,6z/data=!3m1!4b1!4m5!3m4!1s0x3995e8c77d2e68cf:0x34a29abcd0cc86de!8m2!3d28.394857!4d84.124008">Nepal</a></li>
+						<li><a href="https://www.google.com/maps/search/united+nation/@28.3463317,84.1219528,7.01z">United Nation</a></li>
+					</ul>
+				</li>
+			</ul>
+			<div>
+				<p>All Right reserved by &copy;JAIT Solution 2021</p>
+			</div>
+		
+		</footer>
+    </body>
+</html>
