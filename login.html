@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Login Page</title>
+    <!--css-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body {
+            background-size: cover;
+            background-image: url("https://media.istockphoto.com/id/1334591689/photo/woman-hold-digital-tablet-online-shopping-to-digital-cart-with-global-network-connection.jpg?s=612x612&w=0&k=20&c=CYZS8pVk7f4hn8NXZ6tGWbANMxkOZ79d3UVR8vixDzo=");
+            height: auto;
+
+        }
+    </style>
+</head>
+
+<body>
+    <main class="d-flex align-items-center background-image" style="height: 100vh">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 offset-md-4">
+                    <div class="card">
+                        <div class="card-header primary-background text-black text-center">
+                            <span class="fa fa-user-circle fa-3x"></span>
+                            <p>Login Here</p>
+                        </div>
+                        <div class="card-body">
+                            <form action="index.html">
+                                <div class="form-group">
+                                    <label for="email">Email address</label>
+                                    <input name="email" required type="email" class="form-control" id="username"
+                                        aria-describedby="emailHelp" placeholder="Enter email">
+                                    <small id="email" class="form-text text-muted">We'll never share your email with
+                                        anyone else.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Password</label>
+                                    <input name="password" required type="password" class="form-control" id="password"
+                                        placeholder="Password">
+                                </div> 
+                                <div class="container text-center">
+                                    <button type="submit" name="login" onclick="fun()" class="btn btn-primary">Login</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main> 
+    <script>
+        function fun(){
+            var email = document.getElementById('username').value;
+            var pass = document.getElementById('password').value;
+            if(email == 'anjalij@gmail.com' && pass =="12345"){
+                alert("success ful ! ")
+                console.log("hi")
+                window.location.assign('index.html');
+            }else{
+                alert("Wrong entry availabe")
+                console.log("no")
+            }
+    
+        }
+        
+    </script>   
+
+</body>
+</html>
